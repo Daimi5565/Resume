@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saad Ali Daim | DevOps Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* CSS VARIABLES & RESET */
+        :root {
+            --primary: #2563eb; /* DevOps Blue */
+            --secondary: #1e40af;
+            --text: #333333;
+            --bg: #f4f4f9;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* DARK MODE VARIABLES */
+        body.dark-mode {
+            --text: #e2e8f0;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #60a5fa;
+            --shadow: 0 4px 6px rgba(0,0,0,0.5);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; transition: var(--transition); }
+        a { text-decoration: none; color: var(--primary); transition: var(--transition); }
+        a:hover { text-decoration: underline; }
+        ul { list-style-position: inside; }
+
+        /* HEADER SECTION */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+        
+        .contact-info {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a { color: white; font-weight: bold; }
+        .contact-info a:hover { color: #cbd5e1; text-decoration: none; }
+
+        /* DARK MODE TOGGLE */
+        #theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        #theme-toggle:hover { background: rgba(255,255,255,0.4); }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* SECTIONS */
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        section:hover { transform: translateY(-3px); }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        h3 { margin-bottom: 0.5rem; color: var(--text); }
+
+        /* SPECIFIC SECTIONS */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card h4 { color: var(--primary); margin-bottom: 0.5rem; }
+        .skill-card ul { list-style: none; }
+        .skill-card li::before { content: "▹"; color: var(--primary); margin-right: 8px; }
+
+        .experience-item { margin-bottom: 1.5rem; }
+        .job-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 0.5rem; }
+        .job-title { font-weight: bold; font-size: 1.1rem; }
+        .job-date { font-style: italic; opacity: 0.8; }
+        .experience-item ul li { margin-bottom: 0.5rem; }
+
+        .cert-item, .edu-item { margin-bottom: 1rem; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        body.dark-mode .cert-item, body.dark-mode .edu-item { border-bottom: 1px solid #444; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 2rem; opacity: 0.7; font-size: 0.9rem; }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .contact-info { flex-direction: column; gap: 0.5rem; }
+            .job-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button id="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        <h1>Saad Ali Daim</h1>
+        <p>DevOps Engineer | Cloud & Automation Specialist</p>
+        <div class="contact-info">
+            <a href="mailto:saadiali5565@gmail.com"><i class="fas fa-envelope"></i> saadiali5565@gmail.com</a>
+            <a href="tel:+923206092272"><i class="fas fa-phone"></i> +92 320 6092272</a>
+            <a href="https://github.com/Daimi5565" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <span><i class="fas fa-map-marker-alt"></i> Pakistan</span>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>DevOps Engineer with expertise in automating processes and optimizing infrastructure to enhance software delivery. I have 1 year of experience and am proficient in containerization (Docker, Kubernetes), CI/CD pipelines (Jenkins, GitHub Actions, GitLab CI), and monitoring (Prometheus, Grafana). Skilled in Infrastructure as Code (Ansible, Terraform) and cloud computing with Azure and AWS. Passionate about implementing DevSecOps best practices.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h4><i class="fas fa-cloud"></i> Cloud Platforms</h4>
+                    <ul>
+                        <li>Azure (AZ-104)</li>
+                        <li>AWS (EC2, S3, Lambda)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4><i class="fas fa-box-open"></i> Containerization</h4>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4><i class="fas fa-sync-alt"></i> CI/CD & Automation</h4>
+                    <ul>
+                        <li>Jenkins, GitHub Actions</li>
+                        <li>GitLab CI</li>
+                        <li>Ansible, Terraform</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4><i class="fas fa-shield-alt"></i> DevSecOps & Tools</h4>
+                    <ul>
+                        <li>Trivy, Snyk, SonarQube</li>
+                        <li>Prometheus, Grafana</li>
+                        <li>Python, Bash, Git</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <div class="job-header">
+                    <span class="job-title">Associate DevOps Engineer @ OpsOura</span>
+                    <span class="job-date">June 2024 - Present</span>
+                </div>
+                <ul>
+                    <li><strong>Cloud Infrastructure:</strong> Managed cloud-native apps using Azure (Function Apps, CosmosDB) and AWS (Lambda, S3), ensuring high availability.</li>
+                    <li><strong>Containerization:</strong> Deployed and managed Docker containers and Kubernetes clusters for efficient resource utilization.</li>
+                    <li><strong>CI/CD & Security:</strong> Designed pipelines using Jenkins and GitHub Actions, integrating Trivy and SonarQube for security scanning.</li>
+                    <li><strong>IaC:</strong> Automated provisioning with Terraform and configuration with Ansible to reduce manual effort.</li>
+                    <li><strong>Monitoring:</strong> Implemented Prometheus, Grafana, and Datadog for full-stack observability and real-time alerts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="cert-item">
+                <span><strong>Microsoft Certified: Azure Administrator Associate (AZ-104)</strong></span>
+            </div>
+            <div class="cert-item">
+                <span><strong>CCNA Certification</strong> - Adan IT Center, 2024</span>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <span><strong>Dars-e-Nizami (Intermediate Equiv.)</strong> - Jamia Nusrat-ul-Uloom, Gujranwala</span>
+                <span>2015 - 2020</span>
+            </div>
+        </section>
+        
+        <section id="languages">
+             <h2>Languages</h2>
+             <p>English • Urdu</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Saad Ali Daim. Built with HTML, CSS & JS.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Dark Mode Toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = toggleBtn.querySelector('i');
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
